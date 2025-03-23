@@ -1,5 +1,5 @@
-fastapi
-uvicorn
 transformers
 torch
-sacremoses
+fastapi
+uvicorn
+accelerate
