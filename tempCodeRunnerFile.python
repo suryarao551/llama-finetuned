@@ -1,0 +1,13 @@
+from transformers import pipeline
+
+# Load BioGPT model for text generation
+pipe = pipeline("text-generation", model="microsoft/biogpt")
+
+# Use a well-structured medical prompt for better results
+prompt = "humans hearts consists of how many nerves and blood vessels?"
+
+# Generate response with proper max length and truncation
+result = pipe(prompt, max_length=500, truncation=True)
+
+# Print the generated medical answer
+print(result[0]['generated_text'])
